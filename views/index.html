@@ -19,17 +19,27 @@
   </nav>
 
   <!-- main body of our application -->
-  <div class="container" id="events">
-    <div class="col-sm-14">
-      <div class="panel panel-info">
-      <div class="panel-body">
 
-        {{puzzle}}
+  <div class="container" id="wordPuzzle">
+    <div class="col-sm-6">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+        <div class="btn-group btn-group-justified" v-for="row in puzzle">
+        <button type="button" class="btn btn-primary" v-for="letter in row">{{letter}}</button>
+        </div>
+          <div style="margin-top:10px">
+            <button class="btn btn-danger" v-on:click="newPuzzle">New Puzzle</button>
+          </div>
         </div>
       </div>
     </div>
-      {{ message }}
-      <button class="btn btn-primary" v-on:click="newPuzzle">newPuzzle</button>
+    <div class="col-sm-5">
+      <div class="list-group">
+        <div class="list-group-item" v-for="word in wordsList">
+            {{ word }}
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- JS -->

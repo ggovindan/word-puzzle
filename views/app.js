@@ -1,19 +1,27 @@
 // app.js
-const WordPuzzle = require('../lib/word-find').WordPuzzle;
-new Vue({
-  // we want to target the div with and Id of 'events'
-  el: "#events",
 
-  data: {message: "Hello World",
-        puzzle: "puzzle goes here",
+new Vue({
+  el: "#wordPuzzle",
+
+  data: {
+          puzzle: [],
+          wordsList: []
         },
 
-  ready: function() {},
+  mounted: function() {
+    this.newPuzzle();
+  },
 
   methods: {
     newPuzzle: function() {
-      const newPuzzle = WordPuzzle.newPuzzle();
-      console.log('newPuzzle created');
+      this.$http.get('/newPuzzle')
+        .then((result) => {
+          console.log('result=', result);
+          this.$set(this, 'puzzle', result.data.puzzle);
+          this.$set(this, 'wordsList', result.data.wordsList);
+        }, (err) => {
+          console.log('error=', err);
+        });
     }
   }
 });
