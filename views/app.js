@@ -39,6 +39,7 @@ new Vue({
       console.log("row=", row);
       console.log("col=", col);
     },
+
     solve: function() {
       for (var i = 0; i < this.solution.length; i++) {
         var word = this.solution[i].word;
@@ -53,7 +54,10 @@ new Vue({
           var myId = "row=" + nextPos.y + "col=" + nextPos.x;
           console.log('calculated_id=', myId);
           var box = document.getElementById(myId);
-          box.classList.add('solved0');
+          for (var temp = 0; i<3; i++) {
+            box.classList.remove('solved'+temp);
+          }
+          box.classList.add('solved' + i % 5);
         }
       }
     }
