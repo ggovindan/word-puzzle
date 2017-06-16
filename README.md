@@ -19,6 +19,7 @@ Some Javascipt code inside vue app is written to render solved puzzle
 To run just the nodejs part and use your own client side code
 you can clone this repo and  `node lib/word-find.js`
 After adding the following lines
+
     ```javascript
     myPuzzle = new WordPuzzle();
     result = myPuzzle.newPuzzle();
