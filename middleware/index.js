@@ -5,7 +5,7 @@ exports.index = (req, res) => {
 }
 
 exports.getNewPuzzle = (req, res) => {
-  res.json(WordPuzzle.newPuzzle(15,15));
+  res.json(WordPuzzle.newPuzzle(10,10));
 }
 
 exports.getDirections = (req, res) => {
