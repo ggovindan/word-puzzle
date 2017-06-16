@@ -14,6 +14,6 @@ app.get('/', routes.index);
 app.get('/newPuzzle', routes.getNewPuzzle);
 app.get('/directions', routes.getDirections);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('listening on http://localhost:3000');
 })
