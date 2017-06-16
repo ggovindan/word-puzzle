@@ -7,3 +7,8 @@ exports.index = (req, res) => {
 exports.getNewPuzzle = (req, res) => {
   res.json(WordPuzzle.newPuzzle(15,15));
 }
+
+exports.getDirections = (req, res) => {
+  console.log('got a request for getDirections');
+  res.json(WordPuzzle.puzzleDirection);
+}
