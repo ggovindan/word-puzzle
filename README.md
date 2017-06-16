@@ -7,7 +7,7 @@
 
 ----
 ## Preview
-A preview of this game is available in [Heroku](https://word-maze.heroku.com)
+A preview of this game is available in [Heroku](https://word-maze.herokuapp.com/)
 
 ----
 ## Implementation details
