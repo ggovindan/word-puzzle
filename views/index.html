@@ -41,7 +41,7 @@
     </div>
     <div class="col-xs-5">
       <div class="list-group">
-        <div class="list-group-item" v-for="word in wordsList">
+        <div class="list-group-item" v-for="word in wordsList" id='word'>
             {{ word }}
         </div>
       </div>
@@ -84,6 +84,12 @@
     background-color: #dc143c;
   }
 
+    #selectable .solved3 {
+    background-color: #ff4500;
+  }
+    #selectable .solved4 {
+    background-color: #ffd700;
+  }
   </style>
 </body>
 </html>
