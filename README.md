@@ -20,14 +20,14 @@ To run just the nodejs part and use your own client side code
 you can clone this repo and  `node lib/word-find.js`
 After adding the following lines
 
-    ```javascript
-    myPuzzle = new WordPuzzle();
-    result = myPuzzle.newPuzzle();
+```javascript
+myPuzzle = new WordPuzzle();
+result = myPuzzle.newPuzzle();
 
-    // result.puzzle contains the puzzle
-    // result.solution contains the solution with details about orientation and coordinates of the first letter
-    //result.words contains the word list
-
+// result.puzzle contains the puzzle
+// result.solution contains the solution with details about orientation and coordinates of the first letter
+//result.words contains the word list
+```
 
 ----
 ## TODO
